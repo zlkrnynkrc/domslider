@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "DomSlider - DOM Rearranger & Pinning Tool",
+  "version": "1.0.0",
+  "description": "Rearrange page DOM elements seamlessly, pin sections to screen edges, and dock elements in a customizable sidebar.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "DomSlider Paneli Aç/Kapat"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/domslider.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/*", "icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

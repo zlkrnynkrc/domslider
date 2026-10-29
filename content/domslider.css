@@ -1,0 +1,115 @@
+/* DomSlider Global Styles for Page Injections */
+
+/* Drop Indicator Line (Sürükleme anında üst üste binmeyi önleyen gösterge) */
+#domslider-drop-indicator {
+  position: absolute;
+  pointer-events: none;
+  background-color: #3b82f6;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+  z-index: 2147483640;
+  transition: all 0.08s ease-out;
+  display: none;
+}
+
+#domslider-drop-indicator.horizontal {
+  height: 4px;
+}
+
+#domslider-drop-indicator.vertical {
+  width: 4px;
+}
+
+/* Hover outline during edit mode */
+.domslider-inspect-hover {
+  outline: 2px dashed #3b82f6 !important;
+  outline-offset: -2px !important;
+  cursor: grab !important;
+}
+
+/* Dragging state */
+.domslider-dragging {
+  opacity: 0.45 !important;
+  filter: grayscale(40%) !important;
+  cursor: grabbing !important;
+}
+
+/* Pinning / Sticky state */
+.domslider-pinned {
+  position: fixed !important;
+  z-index: 2147483600 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.domslider-pinned-top {
+  top: 0px !important;
+  border-bottom: 2px solid #3b82f6 !important;
+}
+
+.domslider-pinned-bottom {
+  bottom: 0px !important;
+  border-top: 2px solid #3b82f6 !important;
+}
+
+/* Element Floating Control Toolbar (Pin & Reset) */
+#domslider-element-toolbar {
+  position: absolute;
+  z-index: 2147483646;
+  display: none;
+  background: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 4px 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #f8fafc;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  /* Elementin içine doğru yerleşim */
+  transform: none;
+  margin-top: 0;
+  transition: opacity 0.15s ease;
+}
+
+#domslider-element-toolbar button {
+  background: #334155;
+  color: #f8fafc;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+#domslider-element-toolbar button:hover {
+  background: #475569;
+}
+
+#domslider-element-toolbar button.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+#domslider-element-toolbar button.danger:hover {
+  background: #dc2626;
+}
+
+/* Shadow root host isolation */
+#domslider-sidebar-host {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  height: 100vh !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+}
+

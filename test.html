@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>DomSlider Test Sayfası</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .header {
+      background: #3b82f6;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      padding: 16px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #1e293b;
+    }
+    .spacer {
+      height: 1200px;
+      background: linear-gradient(180deg, #f1f5f9 0%, #cbd5e1 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      color: #64748b;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header" id="main-header">
+      <h1>🚀 DomSlider Canlı Test Sayfası</h1>
+      <p>Bu sayfada sürükle-bırak, pinleme ve sağ panel (dock) özelliklerini test edebilirsiniz.</p>
+    </div>
+
+    <div class="card" id="card-alpha">
+      <h3>Bölüm A - Haber Bülteni</h3>
+      <p>Bu kartı sürükleyip Bölüm B'nin altına veya üstüne bırakabilirsiniz. Akış bozulmaz ve üst üste binme olmaz.</p>
+    </div>
+
+    <div class="card" id="card-beta">
+      <h3>Bölüm B - Finansal Özet Tablosu</h3>
+      <p>Bu kartı "Pinle" butonuna basarak ekranın üst kenarına sabitleyin ve aşağı kaydırın. Sayfa kaysa dahi üstte takılı kalacaktır.</p>
+    </div>
+
+    <div class="card" id="card-gamma">
+      <h3>Bölüm C - Hızlı Notlar</h3>
+      <p>Bu kartı sağ panele sürükleyin veya "Panele Al" diyerek yan çubuğa yerleştirin. İstenildiğinde "↺ Sıfırla" butonuyla eski yerine döner.</p>
+    </div>
+
+    <div class="spacer">
+      Scroll (Kaydırma) Test Alanı: Sayfayı yukarı/aşağı kaydırıp pinlenen elementin davranışını inceleyin.
+    </div>
+
+    <div class="card" id="card-footer-info">
+      <h3>Alt Bilgi (Footer Alanı)</h3>
+      <p>Tüm değişiklikler URL bazlı olarak Chrome Local Storage'a kaydedilir.</p>
+    </div>
+  </div>
+</body>
+</html>
+
